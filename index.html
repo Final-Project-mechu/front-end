@@ -107,61 +107,114 @@
           <div class="row">
             <div class="col-lg-6 col-md-6">
               <div class="header__top__left">
-                <ul></ul>
+                <ul>
+                </ul>
               </div>
             </div>
             <div class="col-lg-6 col-md-6">
-              <div class="header__top__left">
+              <div class="header__top__right">
                 <div class="header__top__right__auth">
-                  <a href="#" id="signupLink"><i class="fa fa-user"></i>회원가입</a>
-                  <div id="signupModal" class="modal">
-                    <div class="modal-content">
-                      <form>
-                        <label for="admin">어드민 구분:</label>
-                        <input type="text" id="admin" name="admin"><br>
-                        
-                        <label for="signupEmail">이메일:</label> 
-                        <button type="submit">인증번호 전송</button>
-                        <input type="email" id="email" name="email" autocomplete="additional-name"><br>
-
-                        <label for="verifyCode">인증번호 확인:</label> <button type="submit">인증번호 확인</button>
-                        <input type="text" id="verifyCode" name="verifyCode" autocomplete="additional-name"><br> 
-                      
-                        <label for="signupNickname">닉네임:</label>
-                        <input type="text" id="signupNickname" name="Nickname" autocomplete="additional-name"><br>
-                        
-                        <label for="signupPassword">비밀번호:</label>
-                        <input type="password" id="signupPassword" name="password" autocomplete="current-password"><br>
-
-                        <label for="signupPasswordConfirm">비밀번호 확인:</label>
-                        <input type="password" id="signupPasswordConfirm" name="password" autocomplete="current-password"><br>
-                        
-                        <button type="submit" onclick="sign(event)">회원가입</button>
-                        </form>
-                    </div>
+                  <!-- <a href="#"><i class="fa fa-github"></i></a> -->
                 </div>
-                  <a href="#" id="loginLink"><i class="fa fa-user"></i>로그인</a>
-
-                  <div id="loginModal" class="modal">
+                <div class="header__top__right__auth">
+                  <div class="header__top__right__auth">
+                    <a href="#" id="signupLink"
+                      ><i class="fa fa-user"></i>회원가입</a
+                    >
+                    <div id="signupModal" class="modal">
                       <div class="modal-content">
-                          <form>
-                              <label for="Email">이메일:</label>
-                              <input type="email" id="Email" name="Email" autocomplete="additional-name"><br>
-              
-                              <label for="Password">비밀번호:</label>
-                              <input type="password" id="Password" name="Password" autocomplete="current-password"><br>
-              
-                              <button type="submit" onclick="login()">로그인</button>
-                          </form>
+                        <form>
+                          <label for="admin">어드민 구분:</label>
+                          <input type="text" id="admin" name="admin" /><br />
+
+                          <label for="signupEmail">이메일:</label>
+                          <button type="submit">인증번호 전송</button>
+                          <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            autocomplete="additional-name"
+                          /><br />
+
+                          <label for="verifyCode">인증번호 확인:</label>
+                          <button type="submit">인증번호 확인</button>
+                          <input
+                            type="text"
+                            id="verifyCode"
+                            name="verifyCode"
+                            autocomplete="additional-name"
+                          /><br />
+
+                          <label for="signupNickname">닉네임:</label>
+                          <input
+                            type="text"
+                            id="signupNickname"
+                            name="Nickname"
+                            autocomplete="additional-name"
+                          /><br />
+
+                          <label for="signupPassword">비밀번호:</label>
+                          <input
+                            type="password"
+                            id="signupPassword"
+                            name="password"
+                            autocomplete="current-password"
+                          /><br />
+
+                          <label for="signupPasswordConfirm"
+                            >비밀번호 확인:</label
+                          >
+                          <input
+                            type="password"
+                            id="signupPasswordConfirm"
+                            name="password"
+                            autocomplete="current-password"
+                          /><br />
+
+                          <button type="submit" onclick="sign(event)">
+                            회원가입
+                          </button>
+                        </form>
                       </div>
+                    </div>
+                    <a href="#" id="loginLink"
+                      ><i class="fa fa-user"></i>로그인</a
+                    >
+
+                    <div id="loginModal" class="modal">
+                      <div class="modal-content">
+                        <form>
+                          <label for="Email">이메일:</label>
+                          <input
+                            type="email"
+                            id="Email"
+                            name="Email"
+                            autocomplete="additional-name"
+                          /><br />
+
+                          <label for="Password">비밀번호:</label>
+                          <input
+                            type="password"
+                            id="Password"
+                            name="Password"
+                            autocomplete="current-password"
+                          /><br />
+
+                          <button type="submit" onclick="login()">
+                            로그인
+                          </button>
+                        </form>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div> 
               </div>
             </div>
           </div>
         </div>
       </div>
+      <!--index.html의 216라인부터 249라인까지 모든 html에 복붙하고 복붙한 리스트 클래스에 class=action을 적용시켜줍니다.-->
+      <!--다른 html에서는 div class=container의 div부터 해당 div가 끝나는 라인까지 복붙하면 됩니다. 잘 모르겠으면 메뉴를 검색해서 나오는 컨테이너를 찾아 복붙-->
       <div class="container">
         <div class="row">
           <div class="col-lg-3">
@@ -169,32 +222,32 @@
               <a href="./index.html"><img src="img/logo.png" alt="" /></a>
             </div>
           </div>
-          <div class="col-lg-6">
+          <nav class="humberger__menu__nav mobile-menu"></nav>
+          <div class="col-lg-7">
             <nav class="header__menu">
               <ul>
                 <li class="active"><a href="./index.html">홈</a></li>
                 <li><a href="./menu-subscribe.html">메뉴 추천</a></li>
+                <li><a href="./feed.html">피드</a></li>
+                <li><a href="./shoping-cart.html">선호도</a></li>
+                <li><a href="./foodlist.html">메뉴판</a></li>
                 <li>
                   <a href="#">추가 페이지</a>
                   <ul class="header__menu__dropdown">
                     <li><a href="./contact.html">이용 약관</a></li>
-                    <li><a href="./shop-details.html">Shoping Cart</a></li>
-                    <li><a href="./checkout.html">Check Out</a></li>
-                  </ul>
-                </li>
-                <li><a href="./feed.html">피드</a></li>
-                <li><a href="./shoping-cart.html">선호도</a></li>
+                    <!-- <li><a href="./shop-details.html">Shoping Cart</a></li>
+                    <li><a href="./checkout.html">Check Out</a></li> -->
               </ul>
             </nav>
           </div>
-          <div class="col-lg-3">
+          <!--적용 취소하려면 컨테이너 col-lg-6의 </div> 라인 밑에 242번라인~247번라인을 제거하면 됩니다.-->
+          <div class="col-lg-12">
+            <div class="header__cart">
+              <div class="header__cart__price">오늘의 메뉴: <span>차돌짬뽕</span></div>
             </div>
           </div>
+          </div>
         </div>
-        <div class="humberger__open">
-          <i class="fa fa-bars"></i>
-        </div>
-      </div>
     </header>
     <!-- Featured Section Begin -->
     <section class="featured spad">
