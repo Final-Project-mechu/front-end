@@ -109,14 +109,18 @@
             </div>
             <div class="col-lg-6">
               <div class="header__top__right">
-                <div class="header__top__right__social">
+                <div class="header__top__right__auth">
                   <a href="#"><i class="fa fa-github"></i></a>
                 </div>
+                <div class="header__top__right__auth"></div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <!--index.html의 216라인부터 246라인까지 모든 html에 복붙하고 복붙한 리스트 클래스에 class=action을 적용시켜줍니다.-->
+      <!--html주소는 다를 수있으니 본인의 hmtl링크 주소를 확인해주세요-->
+      <!--다른 html에서는 div class=container의 div부터 해당 div가 끝나는 라인까지 복붙하면 됩니다. 잘 모르겠으면 메뉴를 검색해서 나오는 컨테이너를 찾아 복붙-->
       <div class="container">
         <div class="row">
           <div class="col-lg-3">
@@ -129,24 +133,15 @@
             <nav class="header__menu">
               <ul>
                 <li><a href="./index.html">홈</a></li>
+                <li class="active"><a href="./preference.html">선호도</a></li>
+                <li><a href="./foodlist.html">메뉴판</a></li>
                 <li><a href="./menu-subscribe.html">메뉴 추천</a></li>
                 <li><a href="./feed.html">피드</a></li>
-                <li><a href="./shoping-cart.html">선호도</a></li>
-                <li class="active">
-                  <a href="#">추가 페이지</a>
-                  <ul class="header__menu__dropdown">
-                    <li><a href="./contact.html">이용 약관</a></li>
-                    <!-- <li><a href="./shop-details.html">Shoping Cart</a></li>
-                    <li><a href="./checkout.html">Check Out</a></li> -->
               </ul>
             </nav>
           </div>
-          <!--모든 페이지에 적용하려면 컨테이너 col-lg-6의 </div> 라인 밑에 242번라인~247번라인을 복붙하면 됩니다.-->
           <div class="col-lg-3">
-            <div class="header__cart">
-              <div class="header__cart__price">오늘의 메뉴: <span>차돌짬뽕</span></div>
             </div>
-          </div>
           </div>
         </div>
     </header>
@@ -205,106 +200,159 @@
     </section>
     <!-- Hero Section End -->
 
-    <!-- Breadcrumb Section Begin -->
-    <section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb.jpg">
+    
+    
+    <section class="product spad">
       <div class="container">
+        <div class="dropdown">
+          <span class="dropbtn">카테고리</span>
+          <div class="dropdown-content">
+            <a href="#">선호 메뉴</a>
+            <a href="#">제외 메뉴</a>
+            <a href="#">제외 재료</a>
+            <a href="#">제외 재료<br> 포함 음식</a>
+          </div>
+        </div> 
+        <div>
+          <form action="#" style="text-align: center">
+            <input type="text" placeholder="메뉴 및 재료 검색" />
+            <button type="submit" class="site-btn">검색</button>
+          </form>
+        </div>
         <div class="row">
-          <div class="col-lg-12 text-center">
-            <div class="breadcrumb__text">
-              <h2>이용 약관</h2>
-              <div class="breadcrumb__option">
-                <a href="./index.html">홈으로</a>
-                <span>이용 약관 페이지</span>
+          <div class="col-lg-12">
+            <div class="section-title">
+              <h2>선호도 조사</h2> <br>
+            </div>
+            <div class="featured__controls">
+              <ul>
+                <li data-filter="*">All</li>
+                <li data-filter=".oranges">선호 메뉴</li>
+                <li data-filter=".fresh-meat">제외 메뉴</li>
+                <li data-filter=".vegetables">제외 재료</li>
+                <li data-filter=".vegetables">제외 재료 포함 음식</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row featured__filter">
+          <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
+            <div class="featured__item">
+              <div class="featured__item__text">
+                <label for="acc">
+                  체크(옆에 반응 필요)
+                  <input type="checkbox" id="acc" />
+                  <span class="checkmark"></span>
+                </label>
+                <h6>김치찌개</a></h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fastfood">
+            <div class="featured__item">
+              <div
+                class="featured__item__pic set-bg"
+                data-setbg="img/featured/feature-2.jpg"
+              >
+              </div>
+              <div class="featured__item__text">
+                <h6>샘플</a></h6>
+                <h5></h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fresh-meat">
+            <div class="featured__item">
+              <div
+                class="featured__item__pic set-bg"
+                data-setbg="img/featured/feature-3.jpg"
+              >
+              </div>
+              <div class="featured__item__text">
+                <h6>샘플</a></h6>
+                <h5></h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mix fastfood oranges">
+            <div class="featured__item">
+              <div
+                class="featured__item__pic set-bg"
+                data-setbg="img/featured/feature-4.jpg"
+              >
+              </div>
+              <div class="featured__item__text">
+                <h6>샘플</a></h6>
+                <h5></h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mix fresh-meat vegetables">
+            <div class="featured__item">
+              <div
+                class="featured__item__pic set-bg"
+                data-setbg="img/featured/feature-5.jpg"
+              >
+              </div>
+              <div class="featured__item__text">
+                <h6>샘플</a></h6>
+                <h5></h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fastfood">
+            <div class="featured__item">
+              <div
+                class="featured__item__pic set-bg"
+                data-setbg="img/featured/feature-6.jpg"
+              >
+              </div>
+              <div class="featured__item__text">
+                <h6>샘플</a></h6>
+                <h5></h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mix fresh-meat vegetables">
+            <div class="featured__item">
+              <div
+                class="featured__item__pic set-bg"
+                data-setbg="img/featured/feature-7.jpg"
+              >
+              </div>
+              <div class="featured__item__text">
+                <h6>샘플</a></h6>
+                <h5></h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mix fastfood vegetables">
+            <div class="featured__item">
+              <div
+                class="featured__item__pic set-bg"
+                data-setbg="img/featured/feature-8.jpg"
+              >
+              </div>
+              <div class="featured__item__text">
+                <h6>샘플</a></h6>
+                <h5></h5>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- Breadcrumb Section End -->
+        
+    <div class="button-container">
+      <button class="button2">메뉴 확인버튼</button>
+  </div>
 
-    <!-- Contact Section Begin -->
-    <section class="contact spad">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-3 col-sm-6 text-center">
-            <!-- <div class="contact__widget">
-              <span class="icon_phone"></span>
-              <h4>Phone</h4>
-              <p>+01-3-8888-6868</p>
-            </div> -->
-          </div>
-          <div class="col-lg-3 col-md-3 col-sm-6 text-center">
-            <!-- <div class="contact__widget">
-              <span class="icon_pin_alt"></span>
-              <h4>Address</h4>
-              <p>60-49 Road 11378 New York</p>
-            </div> -->
-          </div>
-          <div class="col-lg-3 col-md-3 col-sm-6 text-center">
-            <!-- <div class="contact__widget">
-              <span class="icon_clock_alt"></span>
-              <h4>Open time</h4>
-              <p>10:00 am to 23:00 pm</p>
-            </div> -->
-          </div>
-          <div class="col-lg-3 col-md-3 col-sm-6 text-center">
-            <!-- <div class="contact__widget">
-              <span class="icon_mail_alt"></span>
-              <h4>Email</h4>
-              <p>hello@colorlib.com</p>
-            </div> -->
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Contact Section End -->
-
-    <!-- Map Begin -->
-    <!-- <div class="map">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49116.39176087041!2d-86.41867791216099!3d39.69977417971648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886ca48c841038a1%3A0x70cfba96bf847f0!2sPlainfield%2C%20IN%2C%20USA!5e0!3m2!1sen!2sbd!4v1586106673811!5m2!1sen!2sbd"
-        height="500"
-        style="border: 0"
-        allowfullscreen=""
-        aria-hidden="false"
-        tabindex="0"
-      ></iframe>
-      <div class="map-inside">
-        <i class="icon_pin"></i>
-        <div class="inside-widget">
-          <h4>New York</h4>
-          <ul>
-            <li>Phone: +12-345-6789</li>
-            <li>Add: 16 Creek Ave. Farmingdale, NY</li>
-          </ul>
-        </div>
-      </div>
-    </div> -->
-    <!-- Map End -->
-
-    <!-- Contact Form Begin -->
-    <div class="contact-form spad">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="contact__form__title">
-              <h2>이용 약관</h2>
-            </div>
-          </div>
-        </div>
-        <form action="#">
-          <div class="row">
-            <div class="col-lg-12 text-center">
-              <p>1. 약관 1~~~</p> <br>
-              <p>2. 약관 2~~~</p> <br>
-              <p>3. 약관 3~~~</p>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-    <!-- Contact Form End -->
+    <div class="button-container">
+      <button class="button">메뉴 추가버튼</button>
+  </div>
+  <div class="button-container">
+      <button class="button">메뉴 삭제버튼</button>
+  </div>
 
     <!-- Footer Section Begin -->
     <footer class="footer spad">
@@ -329,12 +377,7 @@
             <div class="footer__widget">
               <h6>Useful Links</h6>
               <ul>
-                <li><a href="#">이용 약관</a></li>
-                <!-- <li><a href="#">About Our Shop</a></li>
-              <li><a href="#">Secure Shopping</a></li>
-              <li><a href="#">Delivery infomation</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Our Sitemap</a></li> -->
+                <li><a href="./terms.html">이용 약관</a></li>
               </ul>
             </div>
           </div>
@@ -381,7 +424,7 @@
       </div>
     </footer>
     <!-- Footer Section End -->
-
+    <script src="./src/prefer.js" defer></script>
     <!-- Js Plugins -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
