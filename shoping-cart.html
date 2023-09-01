@@ -109,7 +109,7 @@
             </div>
             <div class="col-lg-6">
               <div class="header__top__right">
-                <div class="header__top__right__social">
+                <div class="header__top__right__auth">
                   <a href="#"><i class="fa fa-github"></i></a>
                 </div>
                 <div class="header__top__right__auth"></div>
@@ -118,6 +118,9 @@
           </div>
         </div>
       </div>
+      <!--index.html의 216라인부터 246라인까지 모든 html에 복붙하고 복붙한 리스트 클래스에 class=action을 적용시켜줍니다.-->
+      <!--html주소는 다를 수있으니 본인의 hmtl링크 주소를 확인해주세요-->
+      <!--다른 html에서는 div class=container의 div부터 해당 div가 끝나는 라인까지 복붙하면 됩니다. 잘 모르겠으면 메뉴를 검색해서 나오는 컨테이너를 찾아 복붙-->
       <div class="container">
         <div class="row">
           <div class="col-lg-3">
@@ -125,44 +128,27 @@
               <a href="./index.html"><img src="img/logo.png" alt="" /></a>
             </div>
           </div>
+          <nav class="humberger__menu__nav mobile-menu"></nav>
           <div class="col-lg-6">
             <nav class="header__menu">
               <ul>
                 <li><a href="./index.html">홈</a></li>
-                <li>
-                  <a href="./menu-subscribe.html">메뉴 추천</a>
-                </li>
+                <li><a href="./menu-subscribe.html">메뉴 추천</a></li>
+                <li><a href="./feed.html">피드</a></li>
+                <li class="active"><a href="./shoping-cart.html">선호도</a></li>
                 <li>
                   <a href="#">추가 페이지</a>
                   <ul class="header__menu__dropdown">
                     <li><a href="./contact.html">이용 약관</a></li>
-                  </ul>
-                </li>
-                <li><a href="./feed.html">피드</a></li>
-                <li class="active"><a href="./shoping-cart.html">메뉴판</a></li>
+                    <!-- <li><a href="./shop-details.html">Shoping Cart</a></li>
+                    <li><a href="./checkout.html">Check Out</a></li> -->
               </ul>
             </nav>
           </div>
           <div class="col-lg-3">
-            <!-- <div class="header__cart">
-              <ul>
-                <li>
-                  <a href="#"><i class="fa fa-heart"></i> <span>1</span></a>
-                </li>
-                <li>
-                  <a href="#"
-                    ><i class="fa fa-shopping-bag"></i> <span>3</span></a
-                  >
-                </li>
-              </ul>
-              <div class="header__cart__price">item: <span>$150.00</span></div>
-            </div> -->
+            </div>
           </div>
         </div>
-        <div class="humberger__open">
-          <i class="fa fa-bars"></i>
-        </div>
-      </div>
     </header>
     <!-- Header Section End -->
 
@@ -220,6 +206,7 @@
     <!-- Hero Section End -->
 
     <!-- Breadcrumb Section Begin -->
+
     <section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb.jpg">
       <div class="container">
         <div class="row">
@@ -228,7 +215,7 @@
               <h2>점메추저메추</h2>
               <div class="breadcrumb__option">
                 <a href="./index.html">홈으로</a>
-                <span>메뉴 페이지</span>
+                <span>선호도 페이지</span>
               </div>
             </div>
           </div>
@@ -237,117 +224,165 @@
     </section>
     <!-- Breadcrumb Section End -->
 
-    <!-- Shoping Cart Section Begin -->
-    <section class="shoping-cart spad">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="shoping__cart__table">
-              <table>
-                <thead>
-                  <tr>
-                    <th class="shoping__product">메뉴</th>
-                    <!-- <th>Price</th>
-                    <th>Quantity</th>
-                    <th>Total</th> -->
-                    <th></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="shoping__cart__item">
-                      <img src="img/cart/cart-1.jpg" alt="" />
-                      <h5>메뉴1번</h5>
-                    </td>
-                    <!-- <td class="shoping__cart__price">$55.00</td>
-                    <td class="shoping__cart__quantity">
-                      <div class="quantity">
-                        <div class="pro-qty">
-                          <input type="text" value="1" />
-                        </div>
-                      </div>
-                    </td>
-                    <td class="shoping__cart__total">$110.00</td> -->
-                    <td class="shoping__cart__item__close">
-                      <span class="icon_close"></span>
-                    </td>
-                  </tr>
-                  <!-- <tr>
-                    <td class="shoping__cart__item">
-                      <img src="img/cart/cart-2.jpg" alt="" />
-                      <h5>Fresh Garden Vegetable</h5>
-                    </td>
-                    <td class="shoping__cart__price">$39.00</td>
-                    <td class="shoping__cart__quantity">
-                      <div class="quantity">
-                        <div class="pro-qty">
-                          <input type="text" value="1" />
-                        </div>
-                      </div>
-                    </td>
-                    <td class="shoping__cart__total">$39.99</td>
-                    <td class="shoping__cart__item__close">
-                      <span class="icon_close"></span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="shoping__cart__item">
-                      <img src="img/cart/cart-3.jpg" alt="" />
-                      <h5>Organic Bananas</h5>
-                    </td>
-                    <td class="shoping__cart__price">$69.00</td>
-                    <td class="shoping__cart__quantity">
-                      <div class="quantity">
-                        <div class="pro-qty">
-                          <input type="text" value="1" />
-                        </div>
-                      </div>
-                    </td>
-                    <td class="shoping__cart__total">$69.99</td>
-                    <td class="shoping__cart__item__close">
-                      <span class="icon_close"></span>
-                    </td>
-                  </tr> -->
-                </tbody>
-              </table>
-            </div>
-          </div>
+
+    
+    <section class="product spad">
+      <div class="dropdown">
+        <span class="dropbtn">카테고리</span>
+        <div class="dropdown-content">
+          <a href="#">선호 메뉴</a>
+          <a href="#">제외 메뉴</a>
+          <a href="#">제외 재료</a>
+          <a href="#">제외 재료<br> 포함 음식</a>
         </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <!-- <div class="shoping__cart__btns">
-              <a href="#" class="primary-btn cart-btn">CONTINUE SHOPPING</a>
-              <a href="#" class="primary-btn cart-btn cart-btn-right"
-                ><span class="icon_loading"></span> Upadate Cart</a
-              >
-            </div> -->
-          </div>
-          <!-- <div class="col-lg-6">
-            <div class="shoping__continue">
-              <div class="shoping__discount">
-                <h5>Discount Codes</h5>
-                <form action="#">
-                  <input type="text" placeholder="Enter your coupon code" />
-                  <button type="submit" class="site-btn">APPLY COUPON</button>
-                </form>
+      </div> 
+      <div>
+        <form action="#" style="text-align: center">
+          <input type="text" placeholder="입력칸1" />
+          <button type="submit" class="site-btn">검색</button>
+        </form>
+      </div>
+      <div>
+        <form action="#" style="text-align: center; margin-top: 20px;" >
+          <input type="text" placeholder="입력칸2" />
+          <button type="submit" class="site-btn">검색</button>
+        </form>
+      </div>
+    </section>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="section-title">
+                <h2>선호도 조사</h2> <br>
+              </div>
+              <div class="featured__controls">
+                <ul>
+                  <li data-filter="*">All</li>
+                  <li data-filter=".oranges">선호 메뉴</li>
+                  <li data-filter=".fresh-meat">제외 메뉴</li>
+                  <li data-filter=".vegetables">제외 재료</li>
+                  <li data-filter=".vegetables">제외 재료 포함 음식</li>
+                </ul>
               </div>
             </div>
           </div>
-          <div class="col-lg-6">
-            <div class="shoping__checkout">
-              <h5>Cart Total</h5>
-              <ul>
-                <li>Subtotal <span>$454.98</span></li>
-                <li>Total <span>$454.98</span></li>
-              </ul>
-              <a href="#" class="primary-btn">PROCEED TO CHECKOUT</a>
-            </div> -->
+          <div class="row featured__filter">
+            <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
+              <div class="featured__item">
+                <div class="featured__item__text">
+                  <label for="acc">
+                    체크(옆에 반응 필요)
+                    <input type="checkbox" id="acc" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <h6>김치찌개</a></h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fastfood">
+              <div class="featured__item">
+                <div
+                  class="featured__item__pic set-bg"
+                  data-setbg="img/featured/feature-2.jpg"
+                >
+                </div>
+                <div class="featured__item__text">
+                  <h6>샘플</a></h6>
+                  <h5></h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fresh-meat">
+              <div class="featured__item">
+                <div
+                  class="featured__item__pic set-bg"
+                  data-setbg="img/featured/feature-3.jpg"
+                >
+                </div>
+                <div class="featured__item__text">
+                  <h6>샘플</a></h6>
+                  <h5></h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mix fastfood oranges">
+              <div class="featured__item">
+                <div
+                  class="featured__item__pic set-bg"
+                  data-setbg="img/featured/feature-4.jpg"
+                >
+                </div>
+                <div class="featured__item__text">
+                  <h6>샘플</a></h6>
+                  <h5></h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mix fresh-meat vegetables">
+              <div class="featured__item">
+                <div
+                  class="featured__item__pic set-bg"
+                  data-setbg="img/featured/feature-5.jpg"
+                >
+                </div>
+                <div class="featured__item__text">
+                  <h6>샘플</a></h6>
+                  <h5></h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fastfood">
+              <div class="featured__item">
+                <div
+                  class="featured__item__pic set-bg"
+                  data-setbg="img/featured/feature-6.jpg"
+                >
+                </div>
+                <div class="featured__item__text">
+                  <h6>샘플</a></h6>
+                  <h5></h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mix fresh-meat vegetables">
+              <div class="featured__item">
+                <div
+                  class="featured__item__pic set-bg"
+                  data-setbg="img/featured/feature-7.jpg"
+                >
+                </div>
+                <div class="featured__item__text">
+                  <h6>샘플</a></h6>
+                  <h5></h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mix fastfood vegetables">
+              <div class="featured__item">
+                <div
+                  class="featured__item__pic set-bg"
+                  data-setbg="img/featured/feature-8.jpg"
+                >
+                  <!-- <ul class="featured__item__pic__hover">
+                    <li>
+                      <a href="#"><i class="fa fa-heart"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa fa-retweet"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                    </li>
+                  </ul> -->
+                </div>
+                <div class="featured__item__text">
+                  <h6>샘플</a></h6>
+                  <h5></h5>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- Shoping Cart Section End -->
-
     <!-- Footer Section Begin -->
     <footer class="footer spad">
       <div class="container">
