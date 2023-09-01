@@ -6,9 +6,11 @@
     <meta name="keywords" content="Ogani, unica, creative, html" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="http://unpkg.com/axios/dist/axios.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>점메추저메추</title>
 
-    <!-- Google Font -->
+    <Google Font>
     <link
       href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap"
       rel="stylesheet"
@@ -105,46 +107,105 @@
           <div class="row">
             <div class="col-lg-6 col-md-6">
               <div class="header__top__left">
-                <ul></ul>
+                <ul>
+                </ul>
               </div>
             </div>
             <div class="col-lg-6 col-md-6">
-              <div class="header__top__left">
+              <div class="header__top__right">
                 <div class="header__top__right__auth">
-                  <a href="#" id="loginLink"><i class="fa fa-user"></i>회원가입</a>
-                  <div id="loginModal" class="modal">
-                    <div class="modal-content">
-                      <form>
-                        <label for="email">이메일:</label>
-                        <input type="email" id="email" name="email"><br>
-        
-                        <label for="nickname">닉네임:</label>
-                        <input type="text" id="nickname" name="nickname"><br>
-        
-                        <label for="password">비밀번호:</label>
-                        <input type="password" id="password" name="password"><br>
-        
-                        <label for="confirmPassword">비밀번호 확인:</label>
-                        <input type="password" id="confirmPassword" name="confirmPassword"><br>
-        
-                        <button type="submit">회원가입</button>
-                    </form>
-                    </div>
-                  </div>
-                  <a href="#" id="signupLink"><i class="fa fa-user"></i>로그인</a>
-
-                  <div id="signupModal" class="modal">
+                  <!-- <a href="#"><i class="fa fa-github"></i></a> -->
+                </div>
+                <div class="header__top__right__auth">
+                  <div class="header__top__right__auth">
+                    <a href="#" id="signupLink"
+                      ><i class="fa fa-user"></i>회원가입</a
+                    >
+                    <div id="signupModal" class="modal">
                       <div class="modal-content">
-                          <form>
-                              <label for="signupEmail">이메일:</label>
-                              <input type="email" id="signupEmail" name="signupEmail"><br>
-              
-                              <label for="signupPassword">비밀번호:</label>
-                              <input type="password" id="signupPassword" name="signupPassword"><br>
-              
-                              <button type="submit">로그인</button>
-                          </form>
+                        <form>
+                          <label for="admin">어드민 구분:</label>
+                          <input type="text" id="admin" name="admin" /><br />
+
+                          <label for="signupEmail">이메일:</label>
+                          <button type="submit">인증번호 전송</button>
+                          <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            autocomplete="additional-name"
+                          /><br />
+
+                          <label for="verifyCode">인증번호 확인:</label>
+                          <button type="submit">인증번호 확인</button>
+                          <input
+                            type="text"
+                            id="verifyCode"
+                            name="verifyCode"
+                            autocomplete="additional-name"
+                          /><br />
+
+                          <label for="signupNickname">닉네임:</label>
+                          <input
+                            type="text"
+                            id="signupNickname"
+                            name="Nickname"
+                            autocomplete="additional-name"
+                          /><br />
+
+                          <label for="signupPassword">비밀번호:</label>
+                          <input
+                            type="password"
+                            id="signupPassword"
+                            name="password"
+                            autocomplete="current-password"
+                          /><br />
+
+                          <label for="signupPasswordConfirm"
+                            >비밀번호 확인:</label
+                          >
+                          <input
+                            type="password"
+                            id="signupPasswordConfirm"
+                            name="password"
+                            autocomplete="current-password"
+                          /><br />
+
+                          <button type="submit" onclick="sign(event)">
+                            회원가입
+                          </button>
+                        </form>
                       </div>
+                    </div>
+                    <a href="#" id="loginLink"
+                      ><i class="fa fa-user"></i>로그인</a
+                    >
+
+                    <div id="loginModal" class="modal">
+                      <div class="modal-content">
+                        <form>
+                          <label for="Email">이메일:</label>
+                          <input
+                            type="email"
+                            id="Email"
+                            name="Email"
+                            autocomplete="additional-name"
+                          /><br />
+
+                          <label for="Password">비밀번호:</label>
+                          <input
+                            type="password"
+                            id="Password"
+                            name="Password"
+                            autocomplete="current-password"
+                          /><br />
+
+                          <button type="submit" onclick="login()">
+                            로그인
+                          </button>
+                        </form>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -152,6 +213,8 @@
           </div>
         </div>
       </div>
+      <!--index.html의 216라인부터 249라인까지 모든 html에 복붙하고 복붙한 리스트 클래스에 class=action을 적용시켜줍니다.-->
+      <!--다른 html에서는 div class=container의 div부터 해당 div가 끝나는 라인까지 복붙하면 됩니다. 잘 모르겠으면 메뉴를 검색해서 나오는 컨테이너를 찾아 복붙-->
       <div class="container">
         <div class="row">
           <div class="col-lg-3">
@@ -159,33 +222,31 @@
               <a href="./index.html"><img src="img/logo.png" alt="" /></a>
             </div>
           </div>
+          <nav class="humberger__menu__nav mobile-menu"></nav>
           <div class="col-lg-6">
             <nav class="header__menu">
               <ul>
                 <li class="active"><a href="./index.html">홈</a></li>
                 <li><a href="./menu-subscribe.html">메뉴 추천</a></li>
+                <li><a href="./feed.html">피드</a></li>
+                <li><a href="./shoping-cart.html">선호도</a></li>
                 <li>
                   <a href="#">추가 페이지</a>
                   <ul class="header__menu__dropdown">
                     <li><a href="./contact.html">이용 약관</a></li>
-                    <!-- <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                    <li><a href="./checkout.html">Check Out</a></li>
-                    <li><a href="./blog-details.html">Blog Details</a></li> -->
-                  </ul>
-                </li>
-                <li><a href="./feed.html">피드</a></li>
-                <li><a href="./shoping-cart.html">메뉴판</a></li>
+                    <!-- <li><a href="./shop-details.html">Shoping Cart</a></li>
+                    <li><a href="./checkout.html">Check Out</a></li> -->
               </ul>
             </nav>
           </div>
+          <!--적용 취소하려면 컨테이너 col-lg-6의 </div> 라인 밑에 242번라인~247번라인을 제거하면 됩니다.-->
           <div class="col-lg-3">
+            <div class="header__cart">
+              <div class="header__cart__price">오늘의 메뉴: <span>차돌짬뽕</span></div>
             </div>
           </div>
+          </div>
         </div>
-        <div class="humberger__open">
-          <i class="fa fa-bars"></i>
-        </div>
-      </div>
     </header>
     <!-- Header Section End -->
 
@@ -250,6 +311,23 @@
     </section>
     <!-- Hero Section End -->
 
+      <!-- Breadcrumb Section Begin -->
+      <section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb.jpg">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <div class="breadcrumb__text">
+                <h2>점메추저메추</h2>
+                <div class="breadcrumb__option">
+                  <span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Breadcrumb Section End -->
+
     <!-- Categories Section Begin -->
     <section class="categories">
       <!-- <div class="container">
@@ -303,218 +381,13 @@
 
     <!-- Featured Section Begin -->
     <section class="featured spad">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="section-title">
-              <h2>Featured Product</h2>
-            </div>
-            <div class="featured__controls">
-              <ul>
-                <li class="active" data-filter="*">All</li>
-                <li data-filter=".oranges">선호 음식</li>
-                <li data-filter=".fresh-meat">비선호 음식</li>
-                <li data-filter=".vegetables">비선호 재료</li>
-
-              </ul>
-            </div>
-          </div>
+      <div class="hero__item set-bg" data-setbg="img/hero/banner.jpg">
+        <div class="hero__text">
+            <span>점메추저메추</span>
+            <h2>메인 홈페이지<br /></h2>
+            <a href="menu-subscribe.html" class="primary-btn">메뉴 추천받으러 가기</a>
         </div>
-        <div class="row featured__filter">
-          <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
-            <div class="featured__item">
-              <div
-                class="featured__item__pic set-bg"
-                data-setbg="img/featured/feature-1.jpg"
-              >
-                <ul class="featured__item__pic__hover">
-                  <li>
-                    <a href="#"><i class="fa fa-heart"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-retweet"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-shopping-cart"></i></a>
-                  </li>
-                </ul>
-              </div>
-              <div class="featured__item__text">
-                <h6><a href="#">Crab Pool Security</a></h6>
-                <h5>$30.00</h5>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fastfood">
-            <div class="featured__item">
-              <div
-                class="featured__item__pic set-bg"
-                data-setbg="img/featured/feature-2.jpg"
-              >
-                <ul class="featured__item__pic__hover">
-                  <li>
-                    <a href="#"><i class="fa fa-heart"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-retweet"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-shopping-cart"></i></a>
-                  </li>
-                </ul>
-              </div>
-              <div class="featured__item__text">
-                <h6><a href="#">Crab Pool Security</a></h6>
-                <h5>$30.00</h5>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fresh-meat">
-            <div class="featured__item">
-              <div
-                class="featured__item__pic set-bg"
-                data-setbg="img/featured/feature-3.jpg"
-              >
-                <ul class="featured__item__pic__hover">
-                  <li>
-                    <a href="#"><i class="fa fa-heart"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-retweet"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-shopping-cart"></i></a>
-                  </li>
-                </ul>
-              </div>
-              <div class="featured__item__text">
-                <h6><a href="#">Crab Pool Security</a></h6>
-                <h5>$30.00</h5>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mix fastfood oranges">
-            <div class="featured__item">
-              <div
-                class="featured__item__pic set-bg"
-                data-setbg="img/featured/feature-4.jpg"
-              >
-                <ul class="featured__item__pic__hover">
-                  <li>
-                    <a href="#"><i class="fa fa-heart"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-retweet"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-shopping-cart"></i></a>
-                  </li>
-                </ul>
-              </div>
-              <div class="featured__item__text">
-                <h6><a href="#">Crab Pool Security</a></h6>
-                <h5>$30.00</h5>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mix fresh-meat vegetables">
-            <div class="featured__item">
-              <div
-                class="featured__item__pic set-bg"
-                data-setbg="img/featured/feature-5.jpg"
-              >
-                <ul class="featured__item__pic__hover">
-                  <li>
-                    <a href="#"><i class="fa fa-heart"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-retweet"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-shopping-cart"></i></a>
-                  </li>
-                </ul>
-              </div>
-              <div class="featured__item__text">
-                <h6><a href="#">Crab Pool Security</a></h6>
-                <h5>$30.00</h5>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fastfood">
-            <div class="featured__item">
-              <div
-                class="featured__item__pic set-bg"
-                data-setbg="img/featured/feature-6.jpg"
-              >
-                <ul class="featured__item__pic__hover">
-                  <li>
-                    <a href="#"><i class="fa fa-heart"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-retweet"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-shopping-cart"></i></a>
-                  </li>
-                </ul>
-              </div>
-              <div class="featured__item__text">
-                <h6><a href="#">Crab Pool Security</a></h6>
-                <h5>$30.00</h5>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mix fresh-meat vegetables">
-            <div class="featured__item">
-              <div
-                class="featured__item__pic set-bg"
-                data-setbg="img/featured/feature-7.jpg"
-              >
-                <ul class="featured__item__pic__hover">
-                  <li>
-                    <a href="#"><i class="fa fa-heart"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-retweet"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-shopping-cart"></i></a>
-                  </li>
-                </ul>
-              </div>
-              <div class="featured__item__text">
-                <h6><a href="#">Crab Pool Security</a></h6>
-                <h5>$30.00</h5>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mix fastfood vegetables">
-            <div class="featured__item">
-              <div
-                class="featured__item__pic set-bg"
-                data-setbg="img/featured/feature-8.jpg"
-              >
-                <ul class="featured__item__pic__hover">
-                  <li>
-                    <a href="#"><i class="fa fa-heart"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-retweet"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-shopping-cart"></i></a>
-                  </li>
-                </ul>
-              </div>
-              <div class="featured__item__text">
-                <h6><a href="#">Crab Pool Security</a></h6>
-                <h5>$30.00</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    </div>
     </section>
     <!-- Featured Section End -->
 
@@ -551,8 +424,8 @@
                       <img src="img/latest-product/lp-1.jpg" alt="" />
                     </div>
                     <div class="latest-product__item__text">
-                      <h6>Crab Pool Security</h6>
-                      <span>$30.00</span>
+                      <h6>샘플</h6>
+                      <span></span>
                     </div>
                   </a>
                   <a href="#" class="latest-product__item">
@@ -560,8 +433,8 @@
                       <img src="img/latest-product/lp-2.jpg" alt="" />
                     </div>
                     <div class="latest-product__item__text">
-                      <h6>Crab Pool Security</h6>
-                      <span>$30.00</span>
+                      <h6>샘플</h6>
+                      <span></span>
                     </div>
                   </a>
                   <a href="#" class="latest-product__item">
@@ -569,8 +442,8 @@
                       <img src="img/latest-product/lp-3.jpg" alt="" />
                     </div>
                     <div class="latest-product__item__text">
-                      <h6>Crab Pool Security</h6>
-                      <span>$30.00</span>
+                      <h6>샘플</h6>
+                      <span></span>
                     </div>
                   </a>
                 </div>
@@ -580,8 +453,8 @@
                       <img src="img/latest-product/lp-1.jpg" alt="" />
                     </div>
                     <div class="latest-product__item__text">
-                      <h6>Crab Pool Security</h6>
-                      <span>$30.00</span>
+                      <h6>샘플</h6>
+                      <span></span>
                     </div>
                   </a>
                   <a href="#" class="latest-product__item">
@@ -589,8 +462,8 @@
                       <img src="img/latest-product/lp-2.jpg" alt="" />
                     </div>
                     <div class="latest-product__item__text">
-                      <h6>Crab Pool Security</h6>
-                      <span>$30.00</span>
+                      <h6>샘플</h6>
+                      <span></span>
                     </div>
                   </a>
                   <a href="#" class="latest-product__item">
@@ -598,8 +471,8 @@
                       <img src="img/latest-product/lp-3.jpg" alt="" />
                     </div>
                     <div class="latest-product__item__text">
-                      <h6>Crab Pool Security</h6>
-                      <span>$30.00</span>
+                      <h6>샘플</h6>
+                      <span></span>
                     </div>
                   </a>
                 </div>
@@ -616,8 +489,8 @@
                       <img src="img/latest-product/lp-1.jpg" alt="" />
                     </div>
                     <div class="latest-product__item__text">
-                      <h6>Crab Pool Security</h6>
-                      <span>$30.00</span>
+                      <h6>샘플</h6>
+                      <span></span>
                     </div>
                   </a>
                   <a href="#" class="latest-product__item">
@@ -625,8 +498,8 @@
                       <img src="img/latest-product/lp-2.jpg" alt="" />
                     </div>
                     <div class="latest-product__item__text">
-                      <h6>Crab Pool Security</h6>
-                      <span>$30.00</span>
+                      <h6>샘플</h6>
+                      <span></span>
                     </div>
                   </a>
                   <a href="#" class="latest-product__item">
@@ -634,8 +507,8 @@
                       <img src="img/latest-product/lp-3.jpg" alt="" />
                     </div>
                     <div class="latest-product__item__text">
-                      <h6>Crab Pool Security</h6>
-                      <span>$30.00</span>
+                      <h6>샘플</h6>
+                      <span></span>
                     </div>
                   </a>
                 </div>
@@ -645,8 +518,8 @@
                       <img src="img/latest-product/lp-1.jpg" alt="" />
                     </div>
                     <div class="latest-product__item__text">
-                      <h6>Crab Pool Security</h6>
-                      <span>$30.00</span>
+                      <h6>샘플</h6>
+                      <span></span>
                     </div>
                   </a>
                   <a href="#" class="latest-product__item">
@@ -654,8 +527,8 @@
                       <img src="img/latest-product/lp-2.jpg" alt="" />
                     </div>
                     <div class="latest-product__item__text">
-                      <h6>Crab Pool Security</h6>
-                      <span>$30.00</span>
+                      <h6>샘플</h6>
+                      <span></span>
                     </div>
                   </a>
                   <a href="#" class="latest-product__item">
@@ -663,8 +536,8 @@
                       <img src="img/latest-product/lp-3.jpg" alt="" />
                     </div>
                     <div class="latest-product__item__text">
-                      <h6>Crab Pool Security</h6>
-                      <span>$30.00</span>
+                      <h6>샘플</h6>
+                      <span></span>
                     </div>
                   </a>
                 </div>
@@ -681,8 +554,8 @@
                       <img src="img/latest-product/lp-1.jpg" alt="" />
                     </div>
                     <div class="latest-product__item__text">
-                      <h6>Crab Pool Security</h6>
-                      <span>$30.00</span>
+                      <h6>샘플</h6>
+                      <span></span>
                     </div>
                   </a>
                   <a href="#" class="latest-product__item">
@@ -690,8 +563,8 @@
                       <img src="img/latest-product/lp-2.jpg" alt="" />
                     </div>
                     <div class="latest-product__item__text">
-                      <h6>Crab Pool Security</h6>
-                      <span>$30.00</span>
+                      <h6>샘플</h6>
+                      <span></span>
                     </div>
                   </a>
                   <a href="#" class="latest-product__item">
@@ -699,8 +572,8 @@
                       <img src="img/latest-product/lp-3.jpg" alt="" />
                     </div>
                     <div class="latest-product__item__text">
-                      <h6>Crab Pool Security</h6>
-                      <span>$30.00</span>
+                      <h6>샘플</h6>
+                      <span></span>
                     </div>
                   </a>
                 </div>
@@ -710,8 +583,8 @@
                       <img src="img/latest-product/lp-1.jpg" alt="" />
                     </div>
                     <div class="latest-product__item__text">
-                      <h6>Crab Pool Security</h6>
-                      <span>$30.00</span>
+                      <h6>샘플</h6>
+                      <span></span>
                     </div>
                   </a>
                   <a href="#" class="latest-product__item">
@@ -719,8 +592,8 @@
                       <img src="img/latest-product/lp-2.jpg" alt="" />
                     </div>
                     <div class="latest-product__item__text">
-                      <h6>Crab Pool Security</h6>
-                      <span>$30.00</span>
+                      <h6>샘플</h6>
+                      <span></span>
                     </div>
                   </a>
                   <a href="#" class="latest-product__item">
@@ -728,8 +601,8 @@
                       <img src="img/latest-product/lp-3.jpg" alt="" />
                     </div>
                     <div class="latest-product__item__text">
-                      <h6>Crab Pool Security</h6>
-                      <span>$30.00</span>
+                      <h6>샘플</h6>
+                      <span></span>
                     </div>
                   </a>
                 </div>
@@ -886,32 +759,8 @@
     </footer>
     <!-- Footer Section End -->
 
-    <script>
-      const loginLink = document.getElementById('loginLink');
-      const loginModal = document.getElementById('loginModal');
-
-      loginLink.addEventListener('click', () => {
-          loginModal.style.display = 'block';
-      });
-
-      window.addEventListener('click', (event) => {
-          if (event.target === loginModal) {
-              loginModal.style.display = 'none';
-          }
-      });
-      const signupLink = document.getElementById('signupLink');
-        const signupModal = document.getElementById('signupModal');
-
-        signupLink.addEventListener('click', () => {
-            signupModal.style.display = 'block';
-        });
-
-        window.addEventListener('click', (event) => {
-            if (event.target === signupModal) {
-                signupModal.style.display = 'none';
-            }
-        });
-  </script>
+   
+  <script src="./src/index.js" defer></script>
 
     <!-- Js Plugins -->
     <script src="js/jquery-3.3.1.min.js"></script>
