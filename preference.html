@@ -145,98 +145,56 @@
           </div>
         </div>
     </header>
-    <!-- Header Section End -->
-
-    <!-- Hero Section Begin -->
-    <section class="hero hero-normal">
+    <section class="from-blog spad">
+      <div class="section-title">
+        <h2>선호도 조사</h2>
+      </div>
       <div class="container">
-        <!-- <div class="row">
+        <div class="row">
           <div class="col-lg-3">
-            <div class="hero__categories">
-              <div class="hero__categories__all">
-                <i class="fa fa-bars"></i>
-                <span>All departments</span>
-              </div>
-              <ul>
-                <li><a href="#">Fresh Meat</a></li>
-                <li><a href="#">Vegetables</a></li>
-                <li><a href="#">Fruit & Nut Gifts</a></li>
-                <li><a href="#">Fresh Berries</a></li>
-                <li><a href="#">Ocean Foods</a></li>
-                <li><a href="#">Butter & Eggs</a></li>
-                <li><a href="#">Fastfood</a></li>
-                <li><a href="#">Fresh Onion</a></li>
-                <li><a href="#">Papayaya & Crisps</a></li>
-                <li><a href="#">Oatmeal</a></li>
-                <li><a href="#">Fresh Bananas</a></li>
-              </ul>
+            <div class="dropdown">
+              <select>
+                <option value="카테고리">카테고리</option>
+                <option value="선호 메뉴">선호 메뉴</option>
+                <option value="제외 메뉴">제외 메뉴</option>
+                <option value="제외 재료">제외 재료</option>
+                <option value="제외 재료 포함 음식">제외 재료<br> 포함 음식</option>
+              </select>
             </div>
           </div>
           <div class="col-lg-9">
             <div class="hero__search">
               <div class="hero__search__form">
                 <form action="#">
-                  <div class="hero__search__categories">
-                    All Categories
-                    <span class="arrow_carrot-down"></span>
-                  </div>
-                  <input type="text" placeholder="What do yo u need?" />
+                  <input type="text" placeholder="검색해보세요" />
                   <button type="submit" class="site-btn">SEARCH</button>
                 </form>
               </div>
               <div class="hero__search__phone">
-                <div class="hero__search__phone__icon">
-                  <i class="fa fa-phone"></i>
-                </div>
-                <div class="hero__search__phone__text">
-                  <h5>+65 11.188.888</h5>
-                  <span>support 24/7 time</span>
-                </div>
+                <a href="#" class="site-btn">추가하기</a>
               </div>
             </div>
           </div>
-        </div> -->
+        </div>
       </div>
     </section>
-    <!-- Hero Section End -->
-
-    
-    
+    <!-- Header Section End --> 
     <section class="product spad">
       <div class="container">
-        <div class="dropdown">
-          <span class="dropbtn">카테고리</span>
-          <div class="dropdown-content">
-            <a href="#">선호 메뉴</a>
-            <a href="#">제외 메뉴</a>
-            <a href="#">제외 재료</a>
-            <a href="#">제외 재료<br> 포함 음식</a>
-          </div>
-        </div> 
-        <div>
-          <form action="#" style="text-align: center">
-            <input type="text" placeholder="메뉴 및 재료 검색" />
-            <button type="submit" class="site-btn">검색</button>
-          </form>
-        </div>
         <div class="row">
           <div class="col-lg-12">
-            <div class="section-title">
-              <h2>선호도 조사</h2> <br>
-            </div>
             <div class="featured__controls">
               <ul>
-                <li data-filter="*">All</li>
-                <li data-filter=".oranges">선호 메뉴</li>
-                <li data-filter=".fresh-meat">제외 메뉴</li>
-                <li data-filter=".vegetables">제외 재료</li>
-                <li data-filter=".vegetables">제외 재료 포함 음식</li>
+                <li data-filter=".likes">선호 음식</li>
+                <li data-filter=".excluded-foods">제외 음식</li>
+                <li data-filter=".excluede-ingredient">제외 재료</li>
+                <li data-filter=".excluded-ing-foods">제외 재료 포함 음식</li>
               </ul>
             </div>
           </div>
         </div>
         <div class="row featured__filter">
-          <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
+          <div class="col-lg-3 col-md-4 col-sm-6 mix likes">
             <div class="featured__item">
               <div class="featured__item__text">
                 <label for="acc">
@@ -248,112 +206,66 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fastfood">
+          <div class="col-lg-3 col-md-4 col-sm-6 mix excluede-ingredient">
             <div class="featured__item">
-              <div
-                class="featured__item__pic set-bg"
-                data-setbg="img/featured/feature-2.jpg"
-              >
-              </div>
               <div class="featured__item__text">
-                <h6>샘플</a></h6>
+                <h6>제외재료 샘플</a></h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mix excluded-foods">
+            <div class="featured__item">
+              <div class="featured__item__text">
+                <h6>제외 음식1</a></h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mix fastfood likes">
+            <div class="featured__item">
+              <div class="featured__item__text">
+                <h6>좋아하는 음식샘플1</a></h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mix excluded-foods">
+            <div class="featured__item">
+              <div class="featured__item__text">
+                <h6>제외하는 음식샘플2</a></h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mix likes fastfood">
+            <div class="featured__item">
+              <div class="featured__item__text">
+                <h6>좋아하는 음식샘플</a></h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mix excluded-foods">
+            <div class="featured__item">
+              <div class="featured__item__text">
+                <h6>제외하는 음식샘플3</a></h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mix excluede-ingredient">
+            <div class="featured__item">
+              <div class="featured__item__text">
+                <h6>제외하는 재료 샘플2</a></h6>
                 <h5></h5>
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fresh-meat">
+          <div class="col-lg-3 col-md-4 col-sm-6 mix excluded-ing-foods">
             <div class="featured__item">
-              <div
-                class="featured__item__pic set-bg"
-                data-setbg="img/featured/feature-3.jpg"
-              >
-              </div>
               <div class="featured__item__text">
-                <h6>샘플</a></h6>
-                <h5></h5>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mix fastfood oranges">
-            <div class="featured__item">
-              <div
-                class="featured__item__pic set-bg"
-                data-setbg="img/featured/feature-4.jpg"
-              >
-              </div>
-              <div class="featured__item__text">
-                <h6>샘플</a></h6>
-                <h5></h5>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mix fresh-meat vegetables">
-            <div class="featured__item">
-              <div
-                class="featured__item__pic set-bg"
-                data-setbg="img/featured/feature-5.jpg"
-              >
-              </div>
-              <div class="featured__item__text">
-                <h6>샘플</a></h6>
-                <h5></h5>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fastfood">
-            <div class="featured__item">
-              <div
-                class="featured__item__pic set-bg"
-                data-setbg="img/featured/feature-6.jpg"
-              >
-              </div>
-              <div class="featured__item__text">
-                <h6>샘플</a></h6>
-                <h5></h5>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mix fresh-meat vegetables">
-            <div class="featured__item">
-              <div
-                class="featured__item__pic set-bg"
-                data-setbg="img/featured/feature-7.jpg"
-              >
-              </div>
-              <div class="featured__item__text">
-                <h6>샘플</a></h6>
-                <h5></h5>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 mix fastfood vegetables">
-            <div class="featured__item">
-              <div
-                class="featured__item__pic set-bg"
-                data-setbg="img/featured/feature-8.jpg"
-              >
-              </div>
-              <div class="featured__item__text">
-                <h6>샘플</a></h6>
-                <h5></h5>
+                <h6>제외 재료 포함음식 1</a></h6>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-        
-    <div class="button-container">
-      <button class="button2">메뉴 확인버튼</button>
-  </div>
-
-    <div class="button-container">
-      <button class="button">메뉴 추가버튼</button>
-  </div>
-  <div class="button-container">
-      <button class="button">메뉴 삭제버튼</button>
-  </div>
-
     <!-- Footer Section Begin -->
     <footer class="footer spad">
       <div class="container">
@@ -364,16 +276,12 @@
                 <a href="./index.html"><img src="img/logo.png" alt="" /></a>
               </div>
               <ul>
-                <li>team: 점메추 저메추</li>
-                <li>김세령</li>
-                <li>오준석</li>
-                <li>이서원</li>
-                <li>최하영</li>
-                <li>함형진</li>
+                <p>TEAM : 오늘 뭐 먹지? TOGETHER EAT!</p>
+                <p>김세령 오준석 이서원 최하영 함형진</p>
               </ul>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
+          <div class="col-lg-4 col-md-6 col-sm-5 offset-lg-1">
             <div class="footer__widget">
               <h6>Useful Links</h6>
               <ul>
@@ -383,43 +291,16 @@
           </div>
           <div class="col-lg-4 col-md-12">
             <div class="footer__widget">
-              <h6>팀 점메추저메추 깃허브</h6>
-              <p></p>
-              <!-- <form action="#">
-              <input type="text" placeholder="Enter your mail" />
-              <button type="submit" class="site-btn">Subscribe</button>
-            </form> -->
+              <h6>GitHub</h6>
               <div class="footer__widget__social">
                 <a href="https://github.com/Final-Project-mechu"
                   ><i class="fa fa-github"></i
                 ></a>
-                <!-- <a href="#"><i class="fa fa-instagram"></i></a>
-              <a href="#"><i class="fa fa-twitter"></i></a>
-              <a href="#"><i class="fa fa-pinterest"></i></a> -->
               </div>
             </div>
           </div>
         </div>
         <div class="row">
-          <!-- <div class="col-lg-12">
-          <div class="footer__copyright">
-            <div class="footer__copyright__text">
-              <p>
-                Copyright &copy;
-                <script>
-                  document.write(new Date().getFullYear());
-                </script>
-                All rights reserved | This template is made with
-                <i class="fa fa-heart" aria-hidden="true"></i> by
-                <a href="https://colorlib.com" target="_blank">Colorlib</a>
-
-              </p>
-            </div>
-            <div class="footer__copyright__payment">
-              <img src="img/payment-item.png" alt="" />
-            </div>
-          </div>
-        </div> -->
         </div>
       </div>
     </footer>
